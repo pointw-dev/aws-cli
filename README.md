@@ -15,12 +15,12 @@ First run ```aws configure```, enter your access key, secret key, region, etc.
 Alternately you can run with those values in environment variables:
 
 ```
-docker run --rm -it -e "AWS_ACCESS_KEY_ID=AAAA" -e "AWS_SECRET_ACCESS_KEY=BBBB" -e "AWS_DEFAULT_REGION=us-east-2" cridev/aws
+docker run --rm -it -e "AWS_ACCESS_KEY_ID=AAAA" -e "AWS_SECRET_ACCESS_KEY=BBBB" -e "AWS_DEFAULT_REGION=us-east-2" pointw/aws-cli
 ```
 
 (replace AAAA and BBBB with your actual access keys, of course).
 
-You reuse the container by dropping the ```--rm```, saving having to always run ```aws configure``` or pass the environment variables.  Or you could even build a new image based on this one with those values specified - just don't push that image anywhere public.
+You can reuse the container by dropping the ```--rm```, saving having to always run ```aws configure``` or pass the environment variables.  Or you could even build a new image based on this one with those values specified - just don't push that image anywhere public.
 
 See also:
 [AWS CLI Command Reference](http://docs.aws.amazon.com/cli/latest/reference/)
